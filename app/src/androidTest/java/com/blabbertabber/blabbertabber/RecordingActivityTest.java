@@ -39,7 +39,8 @@ public class RecordingActivityTest {
             new ActivityTestRule<RecordingActivity>(RecordingActivity.class);
     private RecordingActivity mActivity;
 
-    public GrantPermissionRule grantPermissionRule = GrantPermissionRule.grant(permission.RECORD_AUDIO);
+    public GrantPermissionRule grantPermissionRule = GrantPermissionRule
+          .grant(permission.RECORD_AUDIO, permission.MODIFY_AUDIO_SETTINGS);
 
     @Rule
     public RuleChain chain = RuleChain.outerRule(grantPermissionRule).around(mActivityRule);
