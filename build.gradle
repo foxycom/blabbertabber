@@ -18,3 +18,8 @@ allprojects {
         google()
     }
 }
+
+
+ext {
+    jacocoEnabled = System.properties.getProperty("jacocoEnabled") ?: "false"
+}
