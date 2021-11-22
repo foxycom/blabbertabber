@@ -28,7 +28,6 @@ if (carvedTests) {
 }
 
 android {
-
     // Change the src folder for carved tests
     sourceSets {
         test {

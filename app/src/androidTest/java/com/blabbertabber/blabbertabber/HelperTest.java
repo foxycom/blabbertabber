@@ -249,28 +249,6 @@ public class HelperTest {
         assertEquals("the file is created", true, file.exists());
     }
 
-    @Test
-    public void testHowFastIsMyProcessor() {
-        assertThat("My processor is fast enough", Helper.howFastIsMyProcessor(), greaterThan(2.0));
-    }
 
-    @Test
-    public void testhowLongWasMeetingInSeconds00() {
-        assertEquals("A 1-second meeting", 1.0, Helper.howLongWasMeetingInSeconds(32_000), 0.001);
-    }
 
-    @Test
-    public void testhowLongWasMeetingInSeconds01() {
-        assertEquals("A 2-second meeting", 2.0, Helper.howLongWasMeetingInSeconds(64_000), 0.001);
-    }
-
-    @Test
-    public void testhowLongWillDiarizationTake00() {
-        assertEquals("A 10-second meeting at 5x speed", 2.0, Helper.howLongWillDiarizationTake(10.0, 5.0), 0.001);
-    }
-
-    @Test
-    public void testhowLongWillDiarizationTake01() {
-        assertEquals("A 20-second meeting at 4x speed", 5.0, Helper.howLongWillDiarizationTake(20.0, 4.0), 0.001);
-    }
 }
