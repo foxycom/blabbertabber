@@ -248,7 +248,4 @@ public class HelperTest {
         Helper.copyInputFileStreamToFilesystem(inputStream, file.getAbsolutePath());
         assertEquals("the file is created", true, file.exists());
     }
-
-
-
 }

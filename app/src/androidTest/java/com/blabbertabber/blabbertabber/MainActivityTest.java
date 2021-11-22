@@ -2,14 +2,18 @@ package com.blabbertabber.blabbertabber;
 
 //import android.support.test.rule.ActivityTestRule;
 
+import android.Manifest;
+import android.Manifest.permission;
 import android.app.Activity;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
+import android.support.test.rule.GrantPermissionRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.RuleChain;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -31,8 +35,13 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
     private static final String TAG = "MainActivityTest";
-    @Rule
+
+    public GrantPermissionRule permissionRule = GrantPermissionRule.grant(permission.RECORD_AUDIO);
     public IntentsTestRule<MainActivity> mActivityRule = new IntentsTestRule<MainActivity>(MainActivity.class);
+
+    @Rule
+    public RuleChain chain = RuleChain.outerRule(permissionRule).around(mActivityRule);
+
     boolean firstTime = true;
 
     @Before
