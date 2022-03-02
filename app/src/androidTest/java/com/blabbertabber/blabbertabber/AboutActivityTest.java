@@ -19,6 +19,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
  * Espresso default
  */
 
+
 public class AboutActivityTest {
     private static final String TAG = "AboutActivityTest";
     @Rule
