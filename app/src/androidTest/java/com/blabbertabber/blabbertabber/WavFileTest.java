@@ -3,6 +3,7 @@ package com.blabbertabber.blabbertabber;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import static junit.framework.Assert.assertEquals;
@@ -11,6 +12,7 @@ import static junit.framework.Assert.assertEquals;
  * Created by cunnie on 11/18/15.
  */
 
+@Ignore
 @RunWith(AndroidJUnit4.class)
 public class WavFileTest {
 

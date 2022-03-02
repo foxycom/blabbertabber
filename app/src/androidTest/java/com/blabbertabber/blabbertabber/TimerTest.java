@@ -4,6 +4,7 @@ import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import static junit.framework.Assert.assertEquals;
@@ -15,6 +16,7 @@ import static org.junit.Assert.assertThat;
  * Created by cunnie on 11/11/15.
  */
 
+@Ignore
 @RunWith(AndroidJUnit4.class)
 public class TimerTest {
     private static final String TAG = "TimerTest";

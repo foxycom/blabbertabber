@@ -5,6 +5,7 @@ import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import static junit.framework.Assert.assertEquals;
@@ -15,6 +16,7 @@ import static junit.framework.Assert.assertEquals;
  * Test that devices are using the correct microphones.
  */
 
+@Ignore
 @RunWith(AndroidJUnit4.class)
 public class BestMicrophoneTest {
     private static final String TAG = "BestMicrophoneTest";
