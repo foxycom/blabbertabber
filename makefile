@@ -260,6 +260,7 @@ carve-all-select-activities-one : .carved-all-select-activities-one
 carve-all-select-activities-all : .carved-all-select-activities-all
 	@echo "Done"
 
+
 # This requires to have all the tests traced. Note we create the app/src/allCarvedTest folder !
 .carved-all-select-all : $(ESPRESSO_TESTS)
 	@export ABC_CONFIG=$(ABC_CFG) && \
@@ -268,8 +269,10 @@ carve-all-select-activities-all : .carved-all-select-activities-all
 	$(ABC) carve-all app-original.apk traces app/src/allCarvedTest force-clean 2>&1 | tee carving.log
 	@export ABC_CONFIG=$(ABC_CFG) && $(ABC) stop-all-emulators
 # Make sure this file has the right timestamp - probably touch will work the same
-	@sleep 1; echo "" > .carved-all-select-all
+	@sleep 1
+	echo "" > .carved-all-select-all
 	@sleep 1; echo "" > .carved-all
+	echo "" > .carved-all
 
 .carved-all-select-one : $(ESPRESSO_TESTS)
 	@export ABC_CONFIG=$(ABC_CFG) && \
@@ -280,7 +283,7 @@ carve-all-select-activities-all : .carved-all-select-activities-all
 # Make sure this file has the right timestamp - probably touch will work the same
 	@sleep 1; echo "" > .carved-all-select-one
 	@sleep 1; echo "" > .carved-all
-	
+
 .carved-all-select-activities-all : $(ESPRESSO_TESTS)
 	@export ABC_CONFIG=$(ABC_CFG) && \
 	export CARVING_OPTIONS=$(SELECT_ACTIVITIES_ALL_CARVING_OPTIONS) && \
