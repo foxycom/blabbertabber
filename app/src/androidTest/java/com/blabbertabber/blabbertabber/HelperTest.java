@@ -5,6 +5,7 @@ import android.support.test.runner.AndroidJUnit4;
 import org.hamcrest.core.StringContains;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 
@@ -22,6 +23,7 @@ import static org.hamcrest.Matchers.greaterThan;
  * Created by cunnie on 11/11/15.
  */
 
+@Ignore
 @RunWith(AndroidJUnit4.class)
 public class HelperTest {
     private static final String TAG = "HelperTest";

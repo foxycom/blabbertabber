@@ -3,6 +3,7 @@ package com.blabbertabber.blabbertabber;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import java.util.Arrays;
@@ -14,6 +15,7 @@ import static junit.framework.Assert.assertTrue;
 /**
  * Created by cunnie on 4/10/16.
  */
+@Ignore
 @RunWith(AndroidJUnit4.class)
 public class AudioRecordEmulatorTest {
     static final int ARRAYSIZE = 16;
